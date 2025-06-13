@@ -3,11 +3,9 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
   images: {
-  domains: ['via.placeholder.com']
-}
-
+    domains: ['via.placeholder.com'],
+  },
 };
-
 
 const withIntl = createNextIntlPlugin();
 
