@@ -5,8 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 /* Si sigues usando animaciones de tw-animate-css: */
-@import "tw-animate-css";
-
 
 @custom-variant dark (&:is(.dark *));
 
