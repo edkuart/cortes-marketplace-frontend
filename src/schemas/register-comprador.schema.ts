@@ -1,4 +1,4 @@
-// src/schemas/register-schema.ts
+// src/schemas/register-comprador.schema.ts
 import { z } from 'zod'
 
 export const registerCompradorSchema = z.object({
@@ -6,6 +6,8 @@ export const registerCompradorSchema = z.object({
   email: z.string().email("Correo inválido"),
   password: z.string().min(6, "Mínimo 6 caracteres"),
   confirmarPassword: z.string().min(6, "Confirmación requerida"),
+  telefono: z.string().optional().or(z.literal("")),
+  direccion: z.string().optional().or(z.literal("")),
 }).refine((data) => data.password === data.confirmarPassword, {
   message: "Las contraseñas no coinciden",
   path: ["confirmarPassword"],
